@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!--This is an auto generated document. Changes to this document may cause incorrect behavior.-->
+<wap-provisioningdoc>
+    <characteristic type="ProfileInfo">
+        <parm name="created_wizard_version" value="11.0.1" />
+    </characteristic>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="IPStaticAddress" />
+        <parm name="ModifiedDate" value="2023-02-14 16:29:46" />
+        <parm name="TargetSystemVersion" value="11.1" />
+        <characteristic type="Wi-Fi" version="11.1">
+            <parm name="emdk_name" value="SetCustomConf" />
+            <parm name="UseRegulatory" value="0" />
+            <parm name="UseDiagnosticOptions" value="0" />
+            <parm name="UseAdvancedOptions" value="0" />
+            <parm name="NetworkAction" value="Add" />
+            <characteristic type="network-profile">
+                <parm name="SSID" value="SENTINEL" />
+                <parm name="SecurityMode" value="1" />
+                <parm name="WPAModePersonal" value="5" />
+                <characteristic type="key-details">
+                    <parm name="KeyType" value="Passphrase" />
+                    <parm name="ProtectKey" value="0" />
+                    <parm name="PassphraseWPAClear" value="" />
+                </characteristic>
+                <parm name="UseDHCP" value="0" />
+                <characteristic type="ip-details">
+                    <parm name="IpAddress" value="192.168.0.4" />
+                    <parm name="IpGateway1" value="192.168.1.1" />
+                    <parm name="IpMask" value="255.255.255.0" />
+                    <parm name="IpDns1" value="192.168.1.1" />
+                </characteristic>
+                <parm name="UseProxy" value="0" />
+            </characteristic>
+            <parm name="UseHotspotOptions" value="0" />
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>
