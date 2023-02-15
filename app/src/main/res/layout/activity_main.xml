@@ -18,8 +18,160 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:popupTheme="@style/Theme.StaticIPAddressUtility.PopupOverlay"
+            app:title="@string/app_name"
             app:titleTextColor="?attr/colorOnSurface" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?actionBarSize"
+        android:orientation="vertical"
+        android:padding="@dimen/def_half_half_margin">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ssid_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SSID"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <EditText
+                android:id="@+id/ssid_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wpa_mode_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_half_half_margin"
+            android:hint="WPA Mode"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <AutoCompleteTextView
+                android:id="@+id/wpa_mode_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wifi_password_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_half_half_margin"
+            android:hint="WiFi Password"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:endIconMode="password_toggle">
+
+            <EditText
+                android:id="@+id/wifi_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ip_address_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_half_half_margin"
+                android:layout_marginEnd="@dimen/def_quad_margin"
+                android:layout_weight="1"
+                android:hint="IP Address"
+                app:boxBackgroundColor="@android:color/transparent">
+
+                <EditText
+                    android:id="@+id/ip_address_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/gateway_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_half_half_margin"
+                android:layout_weight="1"
+                android:hint="Gateway"
+                app:boxBackgroundColor="@android:color/transparent">
+
+                <EditText
+                    android:id="@+id/gateway_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/subnet_mask_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_half_half_margin"
+                android:layout_marginEnd="@dimen/def_quad_margin"
+                android:layout_weight="1"
+                android:hint="Subnet Mask"
+                app:boxBackgroundColor="@android:color/transparent">
+
+                <EditText
+                    android:id="@+id/subnet_mask_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/primary_dns_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_half_half_margin"
+                android:layout_weight="1"
+                android:hint="Primary DNS"
+                app:boxBackgroundColor="@android:color/transparent">
+
+                <EditText
+                    android:id="@+id/primary_dns_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/process_button"
+            style="@style/Theme.Base.ButtonGeneric"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/def_half_half_margin"
+            android:gravity="center"
+            android:text="Process" />
+
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

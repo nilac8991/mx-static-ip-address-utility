@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="WPAModes">
+        <item>WPA</item>
+        <item>WPA2</item>
+        <item>WPA/WPA2</item>
+        <item>WEP</item>
+        <item>WPA3</item>
+        <item>WPA3 192-bit</item>
+    </string-array>
+</resources>

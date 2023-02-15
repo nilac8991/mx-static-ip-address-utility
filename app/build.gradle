@@ -31,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -41,7 +45,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     // EMDK Loader
-    implementation 'com.github.nilac8991:emdk-loader-lib:1.0.3'
+    implementation 'com.github.nilac8991:emdk-loader-lib:1.0.4'
 
     // EMDK
     implementation 'com.symbol:emdk:9.1.1'

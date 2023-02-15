@@ -29,4 +29,22 @@
 
     <style name="Theme.StaticIPAddressUtility.PopupOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
 
+    <style name="Theme.Base.ButtonGeneric" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">
+            @style/Button.ShapeStyle
+        </item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/teal_700</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:layout_height">55dp</item>
+    </style>
+
+    <style name="Button.ShapeStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">9dp</item>
+        <item name="cornerSizeTopLeft">9dp</item>
+        <item name="cornerSizeBottomRight">9dp</item>
+        <item name="cornerSizeBottomLeft">9dp</item>
+    </style>
+
 </resources>
